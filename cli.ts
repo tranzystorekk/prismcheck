@@ -1,4 +1,4 @@
-import { writeAll } from "https://deno.land/std@0.129.0/streams/conversion.ts";
+import { writeAll } from "std/streams/conversion.ts";
 
 const script = `
 T='gYw'
