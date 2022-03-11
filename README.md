@@ -17,3 +17,17 @@ On your machine, it's simply piped into a Bash process and executed.
 ```console
 land prismcheck
 ```
+
+### Install and run
+
+Install `prismcheck`:
+
+```console
+deno install --allow-run -f --import-map https://deno.land/x/prismcheck/import_map.json -n prismcheck https://deno.land/x/prismcheck/cli.ts
+```
+
+Run:
+
+```console
+prismcheck
+```
