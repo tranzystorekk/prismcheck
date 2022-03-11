@@ -1,0 +1,18 @@
+ignore_merge_commits = false
+branch_whitelist = []
+tag_prefix = "v"
+pre_bump_hooks = []
+post_bump_hooks = [
+    "git push origin",
+    "git push origin v{{version}}",
+]
+
+[commit_types]
+
+[changelog]
+path = "CHANGELOG.md"
+authors = [
+    { signature = "Marcin Puc", username = "tranzystorek-io" }
+]
+
+[bump_profiles]
