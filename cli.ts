@@ -17,12 +17,18 @@ done
 echo
 `;
 
-const process = Deno.run({ cmd: ["bash"], stdin: "piped" });
+async function main() {
+  const process = Deno.run({ cmd: ["bash"], stdin: "piped" });
 
-const inPipe = process.stdin;
-const contentBytes = new TextEncoder().encode(script);
+  const inPipe = process.stdin;
+  const contentBytes = new TextEncoder().encode(script);
 
-await writeAll(inPipe, contentBytes);
-inPipe.close();
+  await writeAll(inPipe, contentBytes);
+  inPipe.close();
 
-await process.status();
+  await process.status();
+}
+
+if (import.meta.main) {
+  main();
+}
